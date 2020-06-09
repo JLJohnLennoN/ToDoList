@@ -34,7 +34,7 @@ export default function todoList() {
       });
     }
     loadTaks();
-    
+
   }, []);
 
   async function add() {
@@ -82,8 +82,7 @@ export default function todoList() {
           <Text style={{ fontWeight: 'bold', marginLeft: 5, marginBottom: 1, color: '#FF8C00' }}>
             Editando - Clique no 'x' para cancelar.
             {/* <Icon name='x-circle' size={20} onPress={cancelEdit} /> */}
-            
-        </Text>
+          </Text>
         </View>
       )}
 
@@ -102,14 +101,14 @@ export default function todoList() {
       </View>
 
       <ShimmerPlaceHolder
-        style={{ height:40, width:'100%', margin: 2, borderRadius: 5}}
+        style={{ height: 40, width: '100%', margin: 2, borderRadius: 5 }}
         autoRun={true}
         visible={visible}>
         <FlatList
           data={tasks}
           keyExtractor={item => item.key}
           renderItem={({ item }) => (
-            <TaskList data={item} deleteItem={deletar} editItem={editar}/>
+            <TaskList data={item} deleteItem={deletar} editItem={editar} />
           )} />
       </ShimmerPlaceHolder>
 
